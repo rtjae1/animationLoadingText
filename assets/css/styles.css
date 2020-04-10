@@ -6,16 +6,10 @@
   --secondaryColor: #ffdd67;
   --tertiaryColor: #535945;
   --rainbow: linear-gradient(-45deg, red, orange, yellow, green, blue, indigo, violet);
-  --jazz1: #2a7e90;
+  --jazz1: rgb(42, 126, 144);
   --jazz2: #165120;
   --jazz3: #031138;
   --jazz4: #013c40;
-  --bg1: #fea503;
-  --bg2: #ffd203;
-  --bg3: #54cd28;
-  --bg4: #129cf5;
-  --bg5: #bb5ed3;
-  --bg6: #ff4f45;
 }
 
 * {
@@ -28,17 +22,38 @@ body {
   padding: 0;
 }
 
-.content {
+h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25rem;
-  height: 25rem;
-  background: var(--jazz1);
-  color: var(--jazz1);
-  border-radius: 50%;
-  border: .5rem solid var(--jazz1);
+  color: rgba(42, 126, 144, .2);
+  letter-spacing: .5rem;
+}
+
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000;
   overflow: hidden;
-  animation: animate 1s linear infinite;
+  animation: animate 10s linear infinite;
+  border-right: .25rem solid var(--jazz1);
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
 }
