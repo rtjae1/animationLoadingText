@@ -1,0 +1,44 @@
+/* ~~~~~~~~~~~~~~ */
+/* color variables */
+/* ~~~~~~~~~~~~~~ */
+:root {
+  --primaryColor: #444444;
+  --secondaryColor: #ffdd67;
+  --tertiaryColor: #535945;
+  --rainbow: linear-gradient(-45deg, red, orange, yellow, green, blue, indigo, violet);
+  --jazz1: #2a7e90;
+  --jazz2: #165120;
+  --jazz3: #031138;
+  --jazz4: #013c40;
+  --bg1: #fea503;
+  --bg2: #ffd203;
+  --bg3: #54cd28;
+  --bg4: #129cf5;
+  --bg5: #bb5ed3;
+  --bg6: #ff4f45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  height: 25rem;
+  background: var(--jazz1);
+  color: var(--jazz1);
+  border-radius: 50%;
+  border: .5rem solid var(--jazz1);
+  overflow: hidden;
+  animation: animate 1s linear infinite;
+}
